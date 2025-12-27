@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #1a2a6c, #000);
+  overflow: hidden;
+  color: #fff;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.imgur.com/QZ7sZ9R.png");
+  opacity: 0.15;
+  animation: float 30s infinite linear;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-200px); }
+}
+
+.app {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.visualizer {
+  height: 60px;
+  margin: 20px 0;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border-radius: 30px;
+  animation: pulse 1.5s infinite ease-in-out;
+  display: none;
+}
+
+@keyframes pulse {
+  0% { transform: scaleX(0.3); }
+  50% { transform: scaleX(1); }
+  100% { transform: scaleX(0.3); }
+}
+
+button {
+  background: #00c6ff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00c6ff;
+}
+
+button:hover {
+  background: #0072ff;
+}
+
+.record {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
